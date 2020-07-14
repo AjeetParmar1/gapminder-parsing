@@ -12,15 +12,14 @@ Hash table for data:
 parsing the data: 
 - gapminder.txt (holds the data for the information. If this isn't present, main.cpp 
   will generate an error message.)
-- parse.R (in case gapminder.txt is deleted or uninentionally modified, running this
+- parse.R (in case gapminder.txt is deleted or unintentionally modified, running this
 program will generate a new file.)
 
-Research conclusions: 
-    Currently, none of these have been created. These will be added as .Rmd files and will 
-    contain conclusions based on certain demographics to disprove the idea that "developing" countries
-    are in higher states of poverty than more econoically developed countries. 
 
-    Note: in my reports, I will not refer to countries by labels such as first-world and third-world 
-    since these were merely labels indicating political alignment during the Cold War. Instead, I will
-    refer to countries as MEDCs (More economically developed country), LEDCs (Less economically developed country), 
-    and transitional (consisting of transitioning nations such as the BRICS (Brazil, Russia, India, China, and South Africa)).
+Research conclusions: 
+   - GDP per capita has risen considerably in LEDCs from the 1960s to the 2010s. 
+
+Websites and other sources used: 
+- http://www.partow.net/programming/hashfunctions/
+- https://stackoverflow.com/questions/83439/remove-spaces-from-stdstring-in-c
+- Dslabs package in R (found using the Harvard online data science course on edx.org)
