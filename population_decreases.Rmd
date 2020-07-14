@@ -1,0 +1,28 @@
+---
+title: "Analysis of population decreases"
+author: "Ajeet Parmar"
+date: "7/14/2020"
+output: html_document
+---
+
+In the following analysis, we look at the following graph: 
+
+```{r, echo = FALSE, warning=FALSE, message=FALSE}
+library(dslabs)
+library(tidyverse)
+library(gtools)
+
+data("gapminder")
+
+gapminder %>% filter(country %in% c("Cambodia", "Rwanda")) %>% 
+  group_by(country) %>% 
+  ggplot(aes(x = year, y = population, color = country)) + geom_line() + 
+  ggtitle("Population decreases due to genocide") + xlab("year") +
+  ylab("population")
+```
+
+  In this graph, we can clearly see 2 population dips with one per country: In Cambodia, the population dip was due to genocide. More specifically, the Khmer Rouge genocide instigated by Pol Pot and the communist party of Kampuchea. This genocide was especially devastating as seen by the graph. A significant dip is seen and it is estimated that nearly 25% of the Cambodian population dies in this genocide. In this case, this genocide was carried out by a totalitarian party with the intention of purging those disloyal to the party.
+  
+  The Rwandan genocide was carried out for different reasons. During the Belgian colonization of Africa, Belgium owned Rwanda and during its colonization, sparked ethnic conflicts between the native Hutu and Tutsi populations with the Tutsi being viewed as superior. After the independence of Rwanda, these tensions remained and boiled over, resulting in the Rwandan genocide against the Tutsi. In this case, the genocide was carried out due to ethnic tensions rather than a dictatorship as in Cambodia. 
+  
+  Although the populations have recovered from these genocides, it is still worth noting that the impacts of these genocides still play a role today through survivors. Some ethnic tensions remain today in Rwanda and Pol Pot's legacy can still be remembered in Southeast Asia. 
