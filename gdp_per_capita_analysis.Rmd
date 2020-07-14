@@ -2,7 +2,7 @@
 title: "GDP per capita analysis"
 author: "Ajeet Parmar"
 date: "7/9/2020"
-output: html_document
+output: github_document
 ---
 
   In our current world, developing nations are often pictured far from reality: 
