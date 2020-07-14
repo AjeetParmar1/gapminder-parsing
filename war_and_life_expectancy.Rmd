@@ -1,0 +1,26 @@
+---
+title: "War and life expectancy"
+author: "Ajeet Parmar"
+date: "7/14/2020"
+output: github_document
+---
+
+  In this section, I analyze life expectancies of 3 different nations: China, 
+the United States, and Vietnam and I analyze different aspects based on patterns: 
+
+```{r, echo = FALSE, warning=FALSE, message=FALSE}
+library(dslabs)
+library(tidyverse)
+library(gtools)
+
+data("gapminder")
+
+gapminder %>% filter(country %in% c("China", "Vietnam", "United States")) %>% 
+  ggplot(aes(x = year, y = life_expectancy, color = country)) + geom_line() + 
+  ggtitle("Life Expectancy of China, Vietnam, and the US from 1960-2010") + 
+  xlab("year") + ylab("life expectancy")
+```
+
+  As seen, there are significant dips during periods of war. In China, there is a dip in the year 1979 which correlates with the Sino-Vietnamese war of 1979. Similarly, both the US and Vietnam experience dips within the years 1955-1975, correlating with the Vietnam war or Second Indochina war. China experiences a rapid increase from 1960. This could be due to the end of the Great Chinese famine or as a byproduct of Chinese industrialization. 
+  
+  Overall, observed events such as war do correlate well with factos such as life expectancy of a nation. However, many other factors may play a greater effect. As seen with the massive increase in Chinese life expectancy, this can be attributed to governmental policies such as massive industrialization. 
